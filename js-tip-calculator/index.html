@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+              padding: 10px;
+              width: 300px;
+            }
+            </style>
+            <script async src="tipsplit-script.js"></script>
+    </head>
+    <body>
+        <p>
+            <span>No. of people: </span><input type="text" name="peoplecount" size="5" max="3"/>
+            
+        </p>
+        <p>
+            <span>Bill amount: </span><input type="text" name="billtotal" size="5" max="3" />
+        </p>
+        <p>
+            <span>tip % </span><input type="text" name="tippercent" size="5" max="3" />
+        </p>
+        <p>
+            <span>Total per person: </span><span id="costpp"></span>
+        </p>
+        <div>
+            <button id="calculate">calculate</button>
+        </div>
+    </body>
+</html>
