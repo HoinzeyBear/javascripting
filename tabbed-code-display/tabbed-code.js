@@ -1,22 +1,11 @@
-var calculateButton = document.getElementById("calculate")
-var onClick = function() {
-    return function() {
-        console.log('Tip me !')
-        var numberOfPeople = document.getElementsByName("peoplecount")[0].value
-        var originalBill = document.getElementsByName("billtotal")[0].value
-        var tipPercent = document.getElementsByName("tippercent")[0].value
-        var totalPerPerson = document.getElementById("costpp")
+var parentWrappers = document.getElementsByClassName("code-block-wrapper")
+console.log(parentWrappers.length)
+for(var i=0; i < parentWrappers.length; i++){
+    var wrapper = parentWrappers[i]
+    var children = wrapper.children
+    var headers = wrapper.querySelectorAll(".cb-header")
+    var blocks = wrapper.querySelectorAll(".code-block")
 
-        var tipAsNumber = (Number.parseFloat(tipPercent) / 100)
-        var totalBill = Number.parseFloat(originalBill) + (originalBill * tipAsNumber)
-
-        var costPerPerson = (totalBill / numberOfPeople).toFixed(2)
-        totalPerPerson.textContent = costPerPerson
-         
-        console.log("For "+numberOfPeople+ " people the bill of "+originalBill + "\n"
-        + "with a tip of " + tipPercent+"% brings the per-person cost to \n"
-        + costPerPerson)
-    }
+    console.log(headers.length)
+    console.log(blocks.length)
 }
-
-calculateButton.addEventListener("click", onClick())
