@@ -1,8 +1,6 @@
-var parentWrappers = document.getElementsByClassName("code-block-wrapper")
-console.log(parentWrappers.length)
-for(var i=0; i < parentWrappers.length; i++){
-    console.log("In wrapper " + i)
-    var wrapper = parentWrappers[i]
+var codeBlockWrappers = document.getElementsByClassName("code-block-wrapper")
+for(var i=0; i < codeBlockWrappers.length; i++){
+    var wrapper = codeBlockWrappers[i]
     var headers = wrapper.querySelectorAll(".cb-header")
     var blocks = wrapper.querySelectorAll(".code-block")
 
